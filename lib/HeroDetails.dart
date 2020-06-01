@@ -13,8 +13,14 @@ class HeroDetails extends StatelessWidget {
         children: [
           ListTile(
             leading: Image.network(details['image']['url']),
-            title: Text(details['name']),
-            subtitle: Text('Occupation: ${details["work"]["occupation"]}'),
+            title: Text(
+              details['name'],
+              style: TextStyle(color: Colors.white),
+            ),
+            subtitle: Text(
+              'Occupation: ${details["work"]["occupation"]}',
+              style: TextStyle(color: Colors.white),
+            ),
           ),
         ],
       ),

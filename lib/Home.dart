@@ -14,6 +14,7 @@ class Home extends StatelessWidget {
           HeroDetails(currentItem),
         ],
       ),
+      color: Colors.teal,
     );
   }
 
