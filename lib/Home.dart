@@ -7,20 +7,10 @@ class Home extends StatelessWidget {
   Home(this.data);
 
   Widget HeroContainer(Map currentItem) {
-    return Container(
-      margin: EdgeInsets.all(10),
-      child: Row(
-        // mainAxisAlignment: MainAxisAlignment.start,
-        children: [
-          Image.network(
-            currentItem['image']['url'],
-            // width,
-            height: 100,
-            fit: BoxFit.cover,
-          ),
-          Padding(
-            padding: EdgeInsets.only(right: 10),
-          ),
+    return Card(
+      child: Column(
+        mainAxisSize: MainAxisSize.min,
+        children: <Widget>[
           HeroDetails(currentItem),
         ],
       ),
@@ -32,7 +22,7 @@ class Home extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Center(
-          child: Text('Super Heroes'),
+          child: Text('DC Comics Character'),
         ),
         backgroundColor: Colors.blueGrey,
       ),
@@ -44,7 +34,15 @@ class Home extends StatelessWidget {
                 return HeroContainer(currentItem);
               },
             )
-          : Text('Loading...'),
+          : Center(
+              child: Text(
+                'Loading...',
+                style: TextStyle(
+                  fontSize: 24,
+                  color: Colors.black,
+                ),
+              ),
+            ),
     );
   }
 }

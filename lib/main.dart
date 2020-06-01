@@ -34,7 +34,7 @@ class _SuperHeroState extends State<SuperHero> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Super  Heroes',
+      title: 'DC Comics Characters',
       debugShowCheckedModeBanner: false,
       home: Home(data),
     );
